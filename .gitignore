@@ -1,0 +1,11 @@
+.hugo_build.lock
+archetypes/
+assets/          
+content/         
+data/            
+hugo.toml       
+i18n/            
+layouts/
+resources/       
+static/          
+themes/          
