@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ELECTRONIC CIRCUITS
+
+  What are the primitives in electronics
+  #
+
+
+electric motive force
+magnetism
+conductors:  materials that allow electricity to flow
+resistors: materials that resist the flow of electricity
+
+
+  The means of combinations
+  #
+
+Different Materials have varying amounts of the above primitive properites.
+These materials are combined to form electrical components.
+Some of these are.
+
+capacitors
+resistors
+transformers
+transistors (silicon)
+copper wire
+insulation
+diodes
+
+
+  circuits
+  #
+
+We use the components above as primitives and combine them into
+electronic circuits by connecting them together using
+breadboards, circuit boards, silicon chips, etc..
+We use circuits to do work for us.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/docs/concepts/electronic_circuits/">
+  <meta property="og:site_name" content="Brooklyn College CISC 7302x Computer Architecture">
+  <meta property="og:title" content="Electronic Circuits">
+  <meta property="og:description" content="ELECTRONIC CIRCUITS
+What are the primitives in electronics # electric motive force magnetism conductors: materials that allow electricity to flow resistors: materials that resist the flow of electricity The means of combinations # Different Materials have varying amounts of the above primitive properites. These materials are combined to form electrical components. Some of these are.
+capacitors resistors transformers transistors (silicon) copper wire insulation diodes circuits # We use the components above as primitives and combine them into electronic circuits by connecting them together using breadboards, circuit boards, silicon chips, etc.. We use circuits to do work for us.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Electronic Circuits | Brooklyn College CISC 7302x Computer Architecture</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="/docs/concepts/electronic_circuits/">
+<link rel="stylesheet" href="/book.min.a7616cf2799b58bddffce9438e31fdbfc6393687cfc0950a4a17cd1cce7e35f6.css" >
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.992a932525bd1c8b43b33974c7068b8c1ff2f483948a8174af46b3c51ab06c37.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Brooklyn College CISC 7302x Computer Architecture</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">Course Information</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/" class="">Concepts</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/interfaces_implementations/" class="">Interfaces and Implementation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/abstraction_layers/" class="">Abstraction Boundaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/electronic_circuits/" class="active">Electronic Circuits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/boolean_algebra/" class="">Boolean Algebra</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/projects/" class="">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Electronic Circuits</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-the-primitives-in-electronics"><strong>What are the primitives in electronics</strong></a></li>
+    <li><a href="#the-means-of-combinations"><strong>The means of combinations</strong></a></li>
+    <li><a href="#circuits"><strong>circuits</strong></a>
+      <ul>
+        <li><a href="#amplification-circuits">Amplification Circuits</a></li>
+        <li><a href="#signal-processing-circuits">Signal Processing Circuits</a></li>
+        <li><a href="#digital-logic-foundations">Digital Logic Foundations</a></li>
+        <li><a href="#power-and-regulation">Power and Regulation</a></li>
+        <li><a href="#timing-and-oscillation">Timing and Oscillation</a></li>
+        <li><a href="#interface-and-protection">Interface and Protection</a></li>
+      </ul>
+    </li>
+    <li><a href="#digital-circuits"><strong>digital circuits</strong></a></li>
+    <li><a href="#introduction-to-fundamental-gates-and-their-electronic-schematics-dot">Introduction to fundamental gates and their electronic schematics.</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p><strong>ELECTRONIC CIRCUITS</strong></p>
+<h2 id="what-are-the-primitives-in-electronics">
+  <strong>What are the primitives in electronics</strong>
+  <a class="anchor" href="#what-are-the-primitives-in-electronics">#</a>
+</h2>
+<ul>
+<li>electric motive force</li>
+<li>magnetism</li>
+<li>conductors:  materials that allow electricity to flow</li>
+<li>resistors: materials that resist the flow of electricity</li>
+</ul>
+<h2 id="the-means-of-combinations">
+  <strong>The means of combinations</strong>
+  <a class="anchor" href="#the-means-of-combinations">#</a>
+</h2>
+<p>Different Materials have varying amounts of the above primitive properites.
+These materials are combined to form electrical components.
+Some of these are.</p>
+<ul>
+<li>capacitors</li>
+<li>resistors</li>
+<li>transformers</li>
+<li>transistors (silicon)</li>
+<li>copper wire</li>
+<li>insulation</li>
+<li>diodes</li>
+</ul>
+<h2 id="circuits">
+  <strong>circuits</strong>
+  <a class="anchor" href="#circuits">#</a>
+</h2>
+<p>We use the components above as primitives and combine them into
+electronic circuits by connecting them together using
+breadboards, circuit boards, silicon chips, etc..
+We use circuits to do work for us.</p>
+<p>Here are some types of circuits we create by combining
+the primitves from above. These circuits are then
+used as primitves and combined to form more complex systems.
+Notice how we name things as a means of abstraction.</p>
+<h3 id="amplification-circuits">
+  Amplification Circuits
+  <a class="anchor" href="#amplification-circuits">#</a>
+</h3>
+<p>Operational Amplifier (Op-Amp) Configurations:</p>
+<ul>
+<li><strong><strong>Inverting Amplifier</strong></strong> - Basic signal amplification with phase inversion</li>
+<li><strong><strong>Non-inverting Amplifier</strong></strong> - Signal amplification without phase change</li>
+<li><strong><strong>Voltage Follower (Buffer)</strong></strong> - High input impedance, low output impedance</li>
+<li><strong><strong>Differential Amplifier</strong></strong> - Amplifies difference between two inputs</li>
+<li><strong><strong>Instrumentation Amplifier</strong></strong> - High-precision differential amplification</li>
+</ul>
+<h3 id="signal-processing-circuits">
+  Signal Processing Circuits
+  <a class="anchor" href="#signal-processing-circuits">#</a>
+</h3>
+<ul>
+<li><strong><strong>Active Filters</strong></strong> - Low-pass, high-pass, band-pass, band-stop using op-amps</li>
+<li><strong><strong>Integrator Circuit</strong></strong> - Produces output proportional to integral of input</li>
+<li><strong><strong>Differentiator Circuit</strong></strong> - Output proportional to derivative of input</li>
+<li><strong><strong>Schmitt Trigger</strong></strong> - Hysteresis comparator for noise immunity</li>
+<li><strong><strong>Peak Detector</strong></strong> - Captures and holds maximum input voltage</li>
+</ul>
+<h3 id="digital-logic-foundations">
+  Digital Logic Foundations
+  <a class="anchor" href="#digital-logic-foundations">#</a>
+</h3>
+<ul>
+<li><strong><strong>Transistor Switches</strong></strong> - BJT and MOSFET switching circuits</li>
+<li><strong><strong>Logic Gates</strong></strong> - NAND, NOR implementations using transistors</li>
+<li><strong><strong>Pull-up/Pull-down Resistors</strong></strong> - Ensuring defined logic states</li>
+<li><strong><strong>Level Shifters</strong></strong> - Converting between different voltage domains</li>
+</ul>
+<h3 id="power-and-regulation">
+  Power and Regulation
+  <a class="anchor" href="#power-and-regulation">#</a>
+</h3>
+<ul>
+<li><strong><strong>Voltage Divider</strong></strong> - Basic voltage scaling</li>
+<li><strong><strong>Linear Voltage Regulator</strong></strong> - Simple voltage regulation (LM7805 family)</li>
+<li><strong><strong>Switching Regulator</strong></strong> - Efficient power conversion (buck, boost)</li>
+<li><strong><strong>Current Mirror</strong></strong> - Precise current copying and scaling</li>
+</ul>
+<h3 id="timing-and-oscillation">
+  Timing and Oscillation
+  <a class="anchor" href="#timing-and-oscillation">#</a>
+</h3>
+<ul>
+<li><strong><strong>RC/LC Oscillators</strong></strong> - Generating periodic signals</li>
+<li><strong><strong>Crystal Oscillator</strong></strong> - Precise frequency generation</li>
+<li><strong><strong>555 Timer</strong></strong> - Astable and monostable multivibrator configurations</li>
+<li><strong><strong>Phase-Locked Loop (PLL)</strong></strong> - Frequency synthesis and synchronization</li>
+</ul>
+<h3 id="interface-and-protection">
+  Interface and Protection
+  <a class="anchor" href="#interface-and-protection">#</a>
+</h3>
+<ul>
+<li><strong><strong>Voltage/Current Limiters</strong></strong> - Circuit protection</li>
+<li><strong><strong>ESD Protection</strong></strong> - Electrostatic discharge protection</li>
+<li><strong><strong>Level Converters</strong></strong> - Interface between different logic families</li>
+<li><strong><strong>Isolation Circuits</strong></strong> - Optocouplers, transformers</li>
+</ul>
+<h2 id="digital-circuits">
+  <strong>digital circuits</strong>
+  <a class="anchor" href="#digital-circuits">#</a>
+</h2>
+<p>For this course we are interested in digital primitives and the
+combinations and further abstraction barriers that we form from them.
+Our fundamental primitive will be a LOGIC GATE. Logic Gates are
+circuits that are created to replicate the properties of objects from
+BOOLEAN ALGEBRA.</p>
+<h2 id="introduction-to-fundamental-gates-and-their-electronic-schematics-dot">
+  Introduction to fundamental gates and their electronic schematics.
+  <a class="anchor" href="#introduction-to-fundamental-gates-and-their-electronic-schematics-dot">#</a>
+</h2>
+<ul>
+<li>and</li>
+<li>or</li>
+<li>not</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-the-primitives-in-electronics"><strong>What are the primitives in electronics</strong></a></li>
+    <li><a href="#the-means-of-combinations"><strong>The means of combinations</strong></a></li>
+    <li><a href="#circuits"><strong>circuits</strong></a>
+      <ul>
+        <li><a href="#amplification-circuits">Amplification Circuits</a></li>
+        <li><a href="#signal-processing-circuits">Signal Processing Circuits</a></li>
+        <li><a href="#digital-logic-foundations">Digital Logic Foundations</a></li>
+        <li><a href="#power-and-regulation">Power and Regulation</a></li>
+        <li><a href="#timing-and-oscillation">Timing and Oscillation</a></li>
+        <li><a href="#interface-and-protection">Interface and Protection</a></li>
+      </ul>
+    </li>
+    <li><a href="#digital-circuits"><strong>digital circuits</strong></a></li>
+    <li><a href="#introduction-to-fundamental-gates-and-their-electronic-schematics-dot">Introduction to fundamental gates and their electronic schematics.</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome on Brooklyn College CISC 7302x Computer Architecture</title>
+    <link>/</link>
+    <description>Recent content in Welcome on Brooklyn College CISC 7302x Computer Architecture</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interfaces and Implementation</title>
+      <link>/docs/concepts/interfaces_implementations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/concepts/interfaces_implementations/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;INTERFACES and IMPLEMENTATIONS&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;This course is &lt;strong&gt;NOT&lt;/strong&gt; really about computers. It&amp;rsquo;s about a &lt;strong&gt;method of&#xA;engineering&lt;/strong&gt; that allows us to build complex systems, by combining&#xA;primitives into functional units or modules, and the ability to make&#xA;those modules usable/reusable without the user knowing how they work,&#xA;just that they do work.&lt;/p&gt;&#xA;&lt;p&gt;As programmers the ability to build these kinds of modules is one of&#xA;the most important tools we have for controlling complexity and&#xA;building complex systems whose bounds that are limited only by our&#xA;imagination.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Abstraction Boundaries</title>
+      <link>/docs/concepts/abstraction_layers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/concepts/abstraction_layers/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;ABSTRACTION BOUNDARIES&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;We build systems in &lt;strong&gt;layers&lt;/strong&gt;. Each layer is built out of &lt;strong&gt;COMBINING&#xA;PRIMITIVES&lt;/strong&gt; and &lt;strong&gt;NAMING THE COMBINATIONS&lt;/strong&gt;. We call the interface to&#xA;a layer &lt;strong&gt;ABSTRACTION BOUNDARY&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;A layer HIDES the details of it&amp;rsquo;s own &lt;strong&gt;implementation&lt;/strong&gt;.  The user of&#xA;the layer only needs to rely on the &lt;strong&gt;interface&lt;/strong&gt; to the combinations&#xA;that have been black boxed at that layer. The &lt;strong&gt;set of black boxes&lt;/strong&gt;&#xA;that use a particuliar &lt;strong&gt;set of primitives&lt;/strong&gt; form the abstraction boundary&#xA;for that layer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Electronic Circuits</title>
+      <link>/docs/concepts/electronic_circuits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/concepts/electronic_circuits/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;ELECTRONIC CIRCUITS&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-the-primitives-in-electronics&#34;&gt;&#xA;  &lt;strong&gt;What are the primitives in electronics&lt;/strong&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-are-the-primitives-in-electronics&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;electric motive force&lt;/li&gt;&#xA;&lt;li&gt;magnetism&lt;/li&gt;&#xA;&lt;li&gt;conductors:  materials that allow electricity to flow&lt;/li&gt;&#xA;&lt;li&gt;resistors: materials that resist the flow of electricity&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-means-of-combinations&#34;&gt;&#xA;  &lt;strong&gt;The means of combinations&lt;/strong&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#the-means-of-combinations&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Different Materials have varying amounts of the above primitive properites.&#xA;These materials are combined to form electrical components.&#xA;Some of these are.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;capacitors&lt;/li&gt;&#xA;&lt;li&gt;resistors&lt;/li&gt;&#xA;&lt;li&gt;transformers&lt;/li&gt;&#xA;&lt;li&gt;transistors (silicon)&lt;/li&gt;&#xA;&lt;li&gt;copper wire&lt;/li&gt;&#xA;&lt;li&gt;insulation&lt;/li&gt;&#xA;&lt;li&gt;diodes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;circuits&#34;&gt;&#xA;  &lt;strong&gt;circuits&lt;/strong&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#circuits&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;We use the components above as primitives and combine them into&#xA;electronic circuits by connecting them together using&#xA;breadboards, circuit boards, silicon chips, etc..&#xA;We use circuits to do work for us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Boolean Algebra</title>
+      <link>/docs/concepts/boolean_algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/concepts/boolean_algebra/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;&#xA;  Intro&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Computers are built on primitive electronics (transistors)&#xA;that output 1 of 2 values.&lt;/p&gt;&#xA;&lt;p&gt;The entire edifice of computer systems is built on&#xA;expressing boolean alegebraic operations using these&#xA;electronics as boolean primitives.&lt;/p&gt;&#xA;&lt;h2 id=&#34;boolean-vlaues&#34;&gt;&#xA;  Boolean vlaues&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#boolean-vlaues&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;we call them 0 and 1&#xA;but you can use&#xA;1, 0&#xA;A,B&#xA;red,black&#xA;on, off&#xA;t , nil&#xA;t and false&lt;/p&gt;&#xA;&lt;p&gt;Boolean Values   (0, 1)&lt;/p&gt;&#xA;&lt;h2 id=&#34;boolean--operartor-functions&#34;&gt;&#xA;  boolean (operartor/functions)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#boolean--operartor-functions&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;AND  -&amp;gt; only outputs 1 if both inputs are 1&#xA;OR   -&amp;gt; outputs 1 if either or both inputs are 1&#xA;NOT  -&amp;gt; outputs the opposite of the input&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

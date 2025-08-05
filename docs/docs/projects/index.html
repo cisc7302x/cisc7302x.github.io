@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Homework projects
+
+  wk1 build 15 gates with a primitive (nand gate)
+  #
+
+not
+and
+or
+xor
+Mux
+Dmux
+Not16
+And16
+Or16
+Mux16
+Or8way
+Mux4way16
+Mux8way16
+Dmux4way
+Dmux8way
+
+  wk2 Build An alu you using the black boxes from last week as primitives
+  #
+
+
+Arithmatic Login unit
+halfadder
+fulladder
+add16
+Inc16
+ALU
+
+
+  wk3 Register and Memory System
+  #
+
+Bit
+Register
+RAM8
+RAM64
+RAM512
+RAM4k
+RAM16K
+Program Counter
+
+  wk4 start to consider the hack machine language
+  #
+
+
+  wk5 combine our alu and memory into a computer
+  #
+
+
+  wk6 develop an assembly language for our computer.
+  #
+
+MIDTERM">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/docs/projects/">
+  <meta property="og:site_name" content="Brooklyn College CISC 7302x Computer Architecture">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Homework projects
+wk1 build 15 gates with a primitive (nand gate) # not and or xor Mux Dmux Not16 And16 Or16 Mux16 Or8way Mux4way16 Mux8way16 Dmux4way Dmux8way
+wk2 Build An alu you using the black boxes from last week as primitives # Arithmatic Login unit halfadder fulladder add16 Inc16 ALU wk3 Register and Memory System # Bit Register RAM8 RAM64 RAM512 RAM4k RAM16K Program Counter
+wk4 start to consider the hack machine language # wk5 combine our alu and memory into a computer # wk6 develop an assembly language for our computer. # MIDTERM">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Projects | Brooklyn College CISC 7302x Computer Architecture</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="/docs/projects/">
+<link rel="stylesheet" href="/book.min.a7616cf2799b58bddffce9438e31fdbfc6393687cfc0950a4a17cd1cce7e35f6.css" >
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.992a932525bd1c8b43b33974c7068b8c1ff2f483948a8174af46b3c51ab06c37.js" ></script>
+<link rel="alternate" type="application/rss+xml" href="/docs/projects/index.xml" title="Brooklyn College CISC 7302x Computer Architecture" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Brooklyn College CISC 7302x Computer Architecture</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">Course Information</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/" class="">Concepts</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/interfaces_implementations/" class="">Interfaces and Implementation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/abstraction_layers/" class="">Abstraction Boundaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/electronic_circuits/" class="">Electronic Circuits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/boolean_algebra/" class="">Boolean Algebra</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/projects/" class="active">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Projects</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#wk1-build-15-gates-with-a-primitive--nand-gate">wk1 build 15 gates with a primitive (nand gate)</a></li>
+    <li><a href="#wk2-build-an-alu-you-using-the-black-boxes-from-last-week-as-primitives">wk2 Build An alu you using the black boxes from last week as primitives</a></li>
+    <li><a href="#wk3-register-and-memory-system">wk3 Register and Memory System</a></li>
+    <li><a href="#wk4-start-to-consider-the-hack-machine-language">wk4 start to consider the hack machine language</a></li>
+    <li><a href="#wk5-combine-our-alu-and-memory-into-a-computer">wk5 combine our alu and memory into a computer</a></li>
+    <li><a href="#wk6-develop-an-assembly-language-for-our-computer-dot">wk6 develop an assembly language for our computer.</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>Homework projects</p>
+<h2 id="wk1-build-15-gates-with-a-primitive--nand-gate">
+  wk1 build 15 gates with a primitive (nand gate)
+  <a class="anchor" href="#wk1-build-15-gates-with-a-primitive--nand-gate">#</a>
+</h2>
+<p>not
+and
+or
+xor
+Mux
+Dmux
+Not16
+And16
+Or16
+Mux16
+Or8way
+Mux4way16
+Mux8way16
+Dmux4way
+Dmux8way</p>
+<h2 id="wk2-build-an-alu-you-using-the-black-boxes-from-last-week-as-primitives">
+  wk2 Build An alu you using the black boxes from last week as primitives
+  <a class="anchor" href="#wk2-build-an-alu-you-using-the-black-boxes-from-last-week-as-primitives">#</a>
+</h2>
+<ul>
+<li>Arithmatic Login unit
+halfadder
+fulladder
+add16
+Inc16
+ALU</li>
+</ul>
+<h2 id="wk3-register-and-memory-system">
+  wk3 Register and Memory System
+  <a class="anchor" href="#wk3-register-and-memory-system">#</a>
+</h2>
+<p>Bit
+Register
+RAM8
+RAM64
+RAM512
+RAM4k
+RAM16K
+Program Counter</p>
+<h2 id="wk4-start-to-consider-the-hack-machine-language">
+  wk4 start to consider the hack machine language
+  <a class="anchor" href="#wk4-start-to-consider-the-hack-machine-language">#</a>
+</h2>
+<h2 id="wk5-combine-our-alu-and-memory-into-a-computer">
+  wk5 combine our alu and memory into a computer
+  <a class="anchor" href="#wk5-combine-our-alu-and-memory-into-a-computer">#</a>
+</h2>
+<h2 id="wk6-develop-an-assembly-language-for-our-computer-dot">
+  wk6 develop an assembly language for our computer.
+  <a class="anchor" href="#wk6-develop-an-assembly-language-for-our-computer-dot">#</a>
+</h2>
+<p>MIDTERM</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#wk1-build-15-gates-with-a-primitive--nand-gate">wk1 build 15 gates with a primitive (nand gate)</a></li>
+    <li><a href="#wk2-build-an-alu-you-using-the-black-boxes-from-last-week-as-primitives">wk2 Build An alu you using the black boxes from last week as primitives</a></li>
+    <li><a href="#wk3-register-and-memory-system">wk3 Register and Memory System</a></li>
+    <li><a href="#wk4-start-to-consider-the-hack-machine-language">wk4 start to consider the hack machine language</a></li>
+    <li><a href="#wk5-combine-our-alu-and-memory-into-a-computer">wk5 combine our alu and memory into a computer</a></li>
+    <li><a href="#wk6-develop-an-assembly-language-for-our-computer-dot">wk6 develop an assembly language for our computer.</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

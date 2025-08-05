@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="INTERFACES and IMPLEMENTATIONS
+This course is NOT really about computers. It&rsquo;s about a method of
+engineering that allows us to build complex systems, by combining
+primitives into functional units or modules, and the ability to make
+those modules usable/reusable without the user knowing how they work,
+just that they do work.
+As programmers the ability to build these kinds of modules is one of
+the most important tools we have for controlling complexity and
+building complex systems whose bounds that are limited only by our
+imagination.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/docs/concepts/interfaces_implementations/">
+  <meta property="og:site_name" content="Brooklyn College CISC 7302x Computer Architecture">
+  <meta property="og:title" content="Interfaces and Implementation">
+  <meta property="og:description" content="INTERFACES and IMPLEMENTATIONS
+This course is NOT really about computers. It’s about a method of engineering that allows us to build complex systems, by combining primitives into functional units or modules, and the ability to make those modules usable/reusable without the user knowing how they work, just that they do work.
+As programmers the ability to build these kinds of modules is one of the most important tools we have for controlling complexity and building complex systems whose bounds that are limited only by our imagination.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Interfaces and Implementation | Brooklyn College CISC 7302x Computer Architecture</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="/docs/concepts/interfaces_implementations/">
+<link rel="stylesheet" href="/book.min.a7616cf2799b58bddffce9438e31fdbfc6393687cfc0950a4a17cd1cce7e35f6.css" >
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.992a932525bd1c8b43b33974c7068b8c1ff2f483948a8174af46b3c51ab06c37.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Brooklyn College CISC 7302x Computer Architecture</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">Course Information</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/" class="">Concepts</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/interfaces_implementations/" class="active">Interfaces and Implementation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/abstraction_layers/" class="">Abstraction Boundaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/electronic_circuits/" class="">Electronic Circuits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/boolean_algebra/" class="">Boolean Algebra</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/projects/" class="">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Interfaces and Implementation</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#example">Example</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p><strong>INTERFACES and IMPLEMENTATIONS</strong></p>
+<p>This course is <strong>NOT</strong> really about computers. It&rsquo;s about a <strong>method of
+engineering</strong> that allows us to build complex systems, by combining
+primitives into functional units or modules, and the ability to make
+those modules usable/reusable without the user knowing how they work,
+just that they do work.</p>
+<p>As programmers the ability to build these kinds of modules is one of
+the most important tools we have for controlling complexity and
+building complex systems whose bounds that are limited only by our
+imagination.</p>
+<p>We call this process <strong>BLACK BOX ABSTRACTION</strong>.</p>
+<p><strong>black box abstraction</strong></p>
+<p>The idea of black box abstraction is to take some PRIMITIVE objects
+and COMBINE them into  FUNCTIONAL REUSABLE <strong>NAMED</strong> MODULES.</p>
+<p>We seperate the ideas of the</p>
+<ul>
+<li>
+<p><strong>interface</strong>:
+the inputs/outputs into and out of the module.
+and the way we communicate with the module.</p>
+</li>
+<li>
+<p><strong>implementation</strong>:
+the processing that happens within the module.</p>
+</li>
+</ul>
+<p>We build a black box around some functionality and the user only need
+to think about the inputs/outputs.</p>
+<p>We seperate:</p>
+<ul>
+<li>WHAT IT IS</li>
+<li>HOW IT IS DONE.</li>
+</ul>
+<h2 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h2>
+<p>Lets say our friend Harry came over to our house and handed
+us some modules.</p>
+<ul>
+<li>a square root module</li>
+<li>a addition module</li>
+</ul>
+<figure><img src="/ox-hugo/2025-07-24_14-19-28_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-07-24_14-20-11_screenshot.png">
+</figure>
+
+<p><strong>Harry</strong></p>
+<p>Harry gives us these module, he doesn&rsquo;t tell us how they find the square root
+or calculate the sum, just that they do.</p>
+<p><strong>George</strong></p>
+<p>Our friend Goerge comes along and says, I really need to figure out the
+SUM OF SQUARES can you help me ?</p>
+<p><strong>Us: This is the essence of software engineering.</strong></p>
+<p>We tell George hold on a second. We go back to the lab and
+put 2 square root modules and an addition module into a box.
+We wire it up so the output of each square root are the inputs
+to the addition and we put the whole thing into a black box and
+write sum of squares on it.</p>
+<p>We then have 3 wires sticking out of the black box that says
+SUM OF SQUARES. The First wire we call A and attach it the input of
+a square root module. The second wire we call B and attach it the input
+of the second square root module. Third wire we call output and attach
+it the output of the addition module.</p>
+<figure><img src="/ox-hugo/2025-07-24_14-22-16_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-07-24_14-30-06_screenshot.png">
+</figure>
+
+<p><strong>At the end of the day</strong></p>
+<p>We didn&rsquo;t need to know how Harry made his modules
+and George didn&rsquo;t need to know how we made ours.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#example">Example</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Goals
+  #
+
+To Build a fully functional general purpose computer from the ground up.
+The course will be divided into two halves:
+
+
+Hardware stack:  nand gate -&gt;  assembler
+
+Electronic circuits
+Boolean algebra
+Logic Gates (digital primitives)
+Arithmetic Logic Units (combinational circuits)
+Registers and Memory (sequential circuits)
+Von Neumann Architecture
+An Assembler
+
+
+
+Software stack:  virtual machine -&gt; operating sytem
+
+
+
+  Materials
+  #
+
+
+Hardware Description Language Online Simulator
+Nand 2 Tetris Course on Youtube
+Nand 2 tetris Home page
+The Elements of Computing Sytems
+Text Book
+
+
+
+
+
+  Grading
+  #
+
+
+7-10 Projects&hellip;&hellip;&hellip;  25%
+Midterm &hellip;&hellip;&hellip;&hellip;&hellip; 30% (around half way thru)
+Final   &hellip;&hellip;&hellip;&hellip;&hellip; 45% (cumulative)
+Attendance &hellip;&hellip;&hellip;&hellip;. MANDATORY
+
+
+  Calendar
+  #
+
+Final exams Dec 16-22th">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/docs/home/">
+  <meta property="og:site_name" content="Brooklyn College CISC 7302x Computer Architecture">
+  <meta property="og:title" content="Course Information">
+  <meta property="og:description" content="Goals # To Build a fully functional general purpose computer from the ground up.
+The course will be divided into two halves:
+Hardware stack: nand gate -&gt; assembler
+Electronic circuits Boolean algebra Logic Gates (digital primitives) Arithmetic Logic Units (combinational circuits) Registers and Memory (sequential circuits) Von Neumann Architecture An Assembler Software stack: virtual machine -&gt; operating sytem
+Materials # Hardware Description Language Online Simulator Nand 2 Tetris Course on Youtube Nand 2 tetris Home page The Elements of Computing Sytems Text Book Grading # 7-10 Projects……… 25% Midterm …………… 30% (around half way thru) Final …………… 45% (cumulative) Attendance …………. MANDATORY Calendar # Final exams Dec 16-22th">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Course Information | Brooklyn College CISC 7302x Computer Architecture</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="/docs/home/">
+<link rel="stylesheet" href="/book.min.a7616cf2799b58bddffce9438e31fdbfc6393687cfc0950a4a17cd1cce7e35f6.css" >
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.992a932525bd1c8b43b33974c7068b8c1ff2f483948a8174af46b3c51ab06c37.js" ></script>
+<link rel="alternate" type="application/rss+xml" href="/docs/home/index.xml" title="Brooklyn College CISC 7302x Computer Architecture" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Brooklyn College CISC 7302x Computer Architecture</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="active">Course Information</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/" class="">Concepts</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/interfaces_implementations/" class="">Interfaces and Implementation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/abstraction_layers/" class="">Abstraction Boundaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/electronic_circuits/" class="">Electronic Circuits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/boolean_algebra/" class="">Boolean Algebra</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/projects/" class="">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Course Information</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#grading">Grading</a></li>
+    <li><a href="#calendar">Calendar</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="goals">
+  Goals
+  <a class="anchor" href="#goals">#</a>
+</h2>
+<p>To Build a <strong>fully functional</strong> general purpose computer from the ground up.</p>
+<p>The course will be divided into two halves:</p>
+<ol>
+<li>
+<p><strong>Hardware stack:</strong>  nand gate -&gt;  assembler</p>
+<ul>
+<li>Electronic circuits</li>
+<li>Boolean algebra</li>
+<li>Logic Gates (digital primitives)</li>
+<li>Arithmetic Logic Units (combinational circuits)</li>
+<li>Registers and Memory (sequential circuits)</li>
+<li>Von Neumann Architecture</li>
+<li>An Assembler</li>
+</ul>
+</li>
+<li>
+<p><strong>Software stack:</strong>  virtual machine -&gt; operating sytem</p>
+</li>
+</ol>
+<h2 id="materials">
+  Materials
+  <a class="anchor" href="#materials">#</a>
+</h2>
+<ul>
+<li><a href="https://nand2tetris.github.io/web-ide/chip/">Hardware Description Language Online Simulator</a></li>
+<li><a href="https://www.youtube.com/watch?v=LqirVc5SlW0&amp;list=PLrDd_kMiAuNmSb-CKWQqq9oBFN_KNMTaI">Nand 2 Tetris Course on Youtube</a></li>
+<li><a href="https://www.nand2tetris.org/">Nand 2 tetris Home page</a></li>
+<li><a href="https://www.amazon.com/Elements-Computing-Systems-Building-Principles/dp/0262640686/ref=ed_oe_p">The Elements of Computing Sytems</a>
+Text Book</li>
+</ul>
+<figure><img src="/ox-hugo/2025-07-24_13-16-14_screenshot.png">
+</figure>
+
+<h2 id="grading">
+  Grading
+  <a class="anchor" href="#grading">#</a>
+</h2>
+<ul>
+<li>7-10 Projects&hellip;&hellip;&hellip;  25%</li>
+<li>Midterm &hellip;&hellip;&hellip;&hellip;&hellip; 30% (around half way thru)</li>
+<li>Final   &hellip;&hellip;&hellip;&hellip;&hellip; 45% (cumulative)</li>
+<li>Attendance &hellip;&hellip;&hellip;&hellip;. MANDATORY</li>
+</ul>
+<h2 id="calendar">
+  Calendar
+  <a class="anchor" href="#calendar">#</a>
+</h2>
+<p><strong>Final exams Dec 16-22th</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>CLASS</th>
+          <th>MONTH</th>
+          <th>DAY</th>
+          <th>HW Due</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Aug</td>
+          <td>28th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Sep</td>
+          <td>4th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Sep</td>
+          <td>11th</td>
+          <td>Project 1</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Sep</td>
+          <td>18th</td>
+          <td>Project 2</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>Sep</td>
+          <td>25th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>NC</td>
+          <td>Oct</td>
+          <td>2nd</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>Oct</td>
+          <td>9th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>Oct</td>
+          <td>16th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>Oct</td>
+          <td>23rd</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>Oct</td>
+          <td>30th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>Nov</td>
+          <td>6th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>Nov</td>
+          <td>13th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>12</td>
+          <td>Nov</td>
+          <td>20th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>NC</td>
+          <td>Nov</td>
+          <td>27th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>13</td>
+          <td>Dec</td>
+          <td>4th</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>14</td>
+          <td>Dec</td>
+          <td>11th</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#grading">Grading</a></li>
+    <li><a href="#calendar">Calendar</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

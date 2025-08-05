@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ABSTRACTION BOUNDARIES
+We build systems in layers. Each layer is built out of COMBINING
+PRIMITIVES and NAMING THE COMBINATIONS. We call the interface to
+a layer ABSTRACTION BOUNDARY.
+A layer HIDES the details of it&rsquo;s own implementation.  The user of
+the layer only needs to rely on the interface to the combinations
+that have been black boxed at that layer. The set of black boxes
+that use a particuliar set of primitives form the abstraction boundary
+for that layer.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/docs/concepts/abstraction_layers/">
+  <meta property="og:site_name" content="Brooklyn College CISC 7302x Computer Architecture">
+  <meta property="og:title" content="Abstraction Boundaries">
+  <meta property="og:description" content="ABSTRACTION BOUNDARIES
+We build systems in layers. Each layer is built out of COMBINING PRIMITIVES and NAMING THE COMBINATIONS. We call the interface to a layer ABSTRACTION BOUNDARY.
+A layer HIDES the details of it’s own implementation. The user of the layer only needs to rely on the interface to the combinations that have been black boxed at that layer. The set of black boxes that use a particuliar set of primitives form the abstraction boundary for that layer.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Abstraction Boundaries | Brooklyn College CISC 7302x Computer Architecture</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="/docs/concepts/abstraction_layers/">
+<link rel="stylesheet" href="/book.min.a7616cf2799b58bddffce9438e31fdbfc6393687cfc0950a4a17cd1cce7e35f6.css" >
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.992a932525bd1c8b43b33974c7068b8c1ff2f483948a8174af46b3c51ab06c37.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Brooklyn College CISC 7302x Computer Architecture</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">Course Information</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/" class="">Concepts</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/interfaces_implementations/" class="">Interfaces and Implementation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/abstraction_layers/" class="active">Abstraction Boundaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/electronic_circuits/" class="">Electronic Circuits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/boolean_algebra/" class="">Boolean Algebra</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/projects/" class="">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Abstraction Boundaries</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p><strong>ABSTRACTION BOUNDARIES</strong></p>
+<p>We build systems in <strong>layers</strong>. Each layer is built out of <strong>COMBINING
+PRIMITIVES</strong> and <strong>NAMING THE COMBINATIONS</strong>. We call the interface to
+a layer <strong>ABSTRACTION BOUNDARY</strong>.</p>
+<p>A layer HIDES the details of it&rsquo;s own <strong>implementation</strong>.  The user of
+the layer only needs to rely on the <strong>interface</strong> to the combinations
+that have been black boxed at that layer. The <strong>set of black boxes</strong>
+that use a particuliar <strong>set of primitives</strong> form the abstraction boundary
+for that layer.</p>
+<p><strong>NEW PRIMITIVES</strong></p>
+<p>The Black Box abstractions from a layer can be used
+as <strong>PRIMITIVES</strong> and <strong>COMBINED</strong> to form new BLACK BOXES and
+to compose a new layer of functionality. This new layer will
+also have an abstraction boundary about it.</p>
+<p><strong>LAYER LANGUAGES</strong></p>
+<p>Each layer presents a language for another layer to use. That language
+is the exposed interface/abstraction boundary for the layer.
+This a general framework for thinking about languages.</p>
+<p><strong>THE THREE QUESTIONS</strong></p>
+<p>We are going to ask these questions about every layer we discuss.</p>
+<ul>
+<li>
+<p>What are the <strong>PRIMITIVES ELEMENTS</strong> that the language provides ?</p>
+</li>
+<li>
+<p>What are the <strong>MEANS OF COMBINATION</strong> of those primitives ?
+Meaning what mechanism are we using to combine them.</p>
+</li>
+<li>
+<p>What are the <strong>MEANS OF ABSTRACTION</strong> ?  How do we put a black box
+around those combinations, so we can use them as modules?</p>
+<ul>
+<li><strong>naming things</strong></li>
+</ul>
+<p>One of the greatest powers we have as
+programmers in our languages is the ability to name
+things. Naming things, like a function, is one of the
+most powerfule a means of abstraction.</p>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

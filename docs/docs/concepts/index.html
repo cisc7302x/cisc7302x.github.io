@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Interfaces and Implementation
+  #
+
+INTERFACES and IMPLEMENTATIONS
+This course is NOT really about computers. It&rsquo;s about a method of
+engineering that allows us to build complex systems, by combining
+primitives into functional units or modules, and the ability to make
+those modules usable/reusable without the user knowing how they work,
+just that they do work.
+As programmers the ability to build these kinds of modules is one of
+the most important tools we have for controlling complexity and
+building complex systems whose bounds that are limited only by our
+imagination.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/docs/concepts/">
+  <meta property="og:site_name" content="Brooklyn College CISC 7302x Computer Architecture">
+  <meta property="og:title" content="Concepts">
+  <meta property="og:description" content="Interfaces and Implementation # INTERFACES and IMPLEMENTATIONS
+This course is NOT really about computers. It’s about a method of engineering that allows us to build complex systems, by combining primitives into functional units or modules, and the ability to make those modules usable/reusable without the user knowing how they work, just that they do work.
+As programmers the ability to build these kinds of modules is one of the most important tools we have for controlling complexity and building complex systems whose bounds that are limited only by our imagination.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Concepts | Brooklyn College CISC 7302x Computer Architecture</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="/docs/concepts/">
+<link rel="stylesheet" href="/book.min.a7616cf2799b58bddffce9438e31fdbfc6393687cfc0950a4a17cd1cce7e35f6.css" >
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.992a932525bd1c8b43b33974c7068b8c1ff2f483948a8174af46b3c51ab06c37.js" ></script>
+<link rel="alternate" type="application/rss+xml" href="/docs/concepts/index.xml" title="Brooklyn College CISC 7302x Computer Architecture" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Brooklyn College CISC 7302x Computer Architecture</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/home/" class="">Course Information</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/" class="active">Concepts</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/interfaces_implementations/" class="">Interfaces and Implementation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/abstraction_layers/" class="">Abstraction Boundaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/electronic_circuits/" class="">Electronic Circuits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/concepts/boolean_algebra/" class="">Boolean Algebra</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/projects/" class="">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Concepts</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#interfaces_implementations">Interfaces and Implementation</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#abstraction_layers">Abstraction Boundaries</a></li>
+    <li><a href="#electronic-circuits">Electronic Circuits</a></li>
+    <li><a href="#boolean_algebra">Boolean Algebra</a>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#boolean-vlaues">Boolean vlaues</a></li>
+        <li><a href="#boolean--operartor-functions">boolean (operartor/functions)</a></li>
+        <li><a href="#boolean-functions-can-be-combined-to-form-new-functions-dot">Boolean functions can be combined to form new functions.</a></li>
+        <li><a href="#boolean-functions-of-more-than-2-inputs-dot">boolean functions of more than 2 inputs.</a></li>
+        <li><a href="#boolean-language">Boolean language</a></li>
+        <li><a href="#boolean-identities">Boolean Identities</a></li>
+        <li><a href="#simplifying-booleans-expressions-with-algebraic-manipulation">simplifying booleans expressions with algebraic manipulation</a></li>
+        <li><a href="#boolean-function-synthesis">Boolean Function Synthesis</a></li>
+        <li><a href="#logic-gates">LOGIC GATES</a></li>
+      </ul>
+    </li>
+    <li><a href="#gates">GATES</a></li>
+    <li><a href="#hardware-description-language">Hardware Description Language</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="interfaces_implementations">
+  Interfaces and Implementation
+  <a class="anchor" href="#interfaces_implementations">#</a>
+</h2>
+<p><strong>INTERFACES and IMPLEMENTATIONS</strong></p>
+<p>This course is <strong>NOT</strong> really about computers. It&rsquo;s about a <strong>method of
+engineering</strong> that allows us to build complex systems, by combining
+primitives into functional units or modules, and the ability to make
+those modules usable/reusable without the user knowing how they work,
+just that they do work.</p>
+<p>As programmers the ability to build these kinds of modules is one of
+the most important tools we have for controlling complexity and
+building complex systems whose bounds that are limited only by our
+imagination.</p>
+<p>We call this process <strong>BLACK BOX ABSTRACTION</strong>.</p>
+<p><strong>black box abstraction</strong></p>
+<p>The idea of black box abstraction is to take some PRIMITIVE objects
+and COMBINE them into  FUNCTIONAL REUSABLE <strong>NAMED</strong> MODULES.</p>
+<p>We seperate the ideas of the</p>
+<ul>
+<li>
+<p><strong>interface</strong>:
+the inputs/outputs into and out of the module.
+and the way we communicate with the module.</p>
+</li>
+<li>
+<p><strong>implementation</strong>:
+the processing that happens within the module.</p>
+</li>
+</ul>
+<p>We build a black box around some functionality and the user only need
+to think about the inputs/outputs.</p>
+<p>We seperate:</p>
+<ul>
+<li>WHAT IT IS</li>
+<li>HOW IT IS DONE.</li>
+</ul>
+<h3 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h3>
+<p>Lets say our friend Harry came over to our house and handed
+us some modules.</p>
+<ul>
+<li>a square root module</li>
+<li>a addition module</li>
+</ul>
+<figure><img src="/ox-hugo/2025-07-24_14-19-28_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-07-24_14-20-11_screenshot.png">
+</figure>
+
+<p><strong>Harry</strong></p>
+<p>Harry gives us these module, he doesn&rsquo;t tell us how they find the square root
+or calculate the sum, just that they do.</p>
+<p><strong>George</strong></p>
+<p>Our friend Goerge comes along and says, I really need to figure out the
+SUM OF SQUARES can you help me ?</p>
+<p><strong>Us: This is the essence of software engineering.</strong></p>
+<p>We tell George hold on a second. We go back to the lab and
+put 2 square root modules and an addition module into a box.
+We wire it up so the output of each square root are the inputs
+to the addition and we put the whole thing into a black box and
+write sum of squares on it.</p>
+<p>We then have 3 wires sticking out of the black box that says
+SUM OF SQUARES. The First wire we call A and attach it the input of
+a square root module. The second wire we call B and attach it the input
+of the second square root module. Third wire we call output and attach
+it the output of the addition module.</p>
+<figure><img src="/ox-hugo/2025-07-24_14-22-16_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-07-24_14-30-06_screenshot.png">
+</figure>
+
+<p><strong>At the end of the day</strong></p>
+<p>We didn&rsquo;t need to know how Harry made his modules
+and George didn&rsquo;t need to know how we made ours.</p>
+<h2 id="abstraction_layers">
+  Abstraction Boundaries
+  <a class="anchor" href="#abstraction_layers">#</a>
+</h2>
+<p><strong>ABSTRACTION BOUNDARIES</strong></p>
+<p>We build systems in <strong>layers</strong>. Each layer is built out of <strong>COMBINING
+PRIMITIVES</strong> and <strong>NAMING THE COMBINATIONS</strong>. We call the interface to
+a layer <strong>ABSTRACTION BOUNDARY</strong>.</p>
+<p>A layer HIDES the details of it&rsquo;s own <strong>implementation</strong>.  The user of
+the layer only needs to rely on the <strong>interface</strong> to the combinations
+that have been black boxed at that layer. The <strong>set of black boxes</strong>
+that use a particuliar <strong>set of primitives</strong> form the abstraction boundary
+for that layer.</p>
+<p><strong>NEW PRIMITIVES</strong></p>
+<p>The Black Box abstractions from a layer can be used
+as <strong>PRIMITIVES</strong> and <strong>COMBINED</strong> to form new BLACK BOXES and
+to compose a new layer of functionality. This new layer will
+also have an abstraction boundary about it.</p>
+<p><strong>LAYER LANGUAGES</strong></p>
+<p>Each layer presents a language for another layer to use. That language
+is the exposed interface/abstraction boundary for the layer.
+This a general framework for thinking about languages.</p>
+<p><strong>THE THREE QUESTIONS</strong></p>
+<p>We are going to repeatedly ask these three questions throughout the
+semester. We are goint to build a computer in layers and each layer
+has it&rsquo;s own language.</p>
+<ul>
+<li>
+<p>What are the <strong>PRIMITIVES ELEMENTS</strong> that the language provides ?</p>
+</li>
+<li>
+<p>What are the <strong>MEANS OF COMBINATION</strong> of those primitives ?
+Meaning what mechanism are we using to combine them.</p>
+</li>
+<li>
+<p>What are the <strong>MEANS OF ABSTRACTION</strong> ?  How do we put a black box
+around those combinations, so we can use them as modules?</p>
+<ul>
+<li><strong>naming things</strong></li>
+</ul>
+<p>One of the greatest powers we have as
+programmers in our languages is the ability to name
+things. Naming things, like a function, is one of the
+most powerfule a means of abstraction.</p>
+</li>
+</ul>
+<h2 id="electronic-circuits">
+  Electronic Circuits
+  <a class="anchor" href="#electronic-circuits">#</a>
+</h2>
+<p><strong>THE PRIMITIVES IN ELECTRONICS</strong></p>
+<ul>
+<li>electric motive force</li>
+<li>magnetism</li>
+<li>conductors:  materials that allow electricity to flow</li>
+<li>resistors: materials that resist the flow of electricity</li>
+</ul>
+<p><strong>THE MEANS OF COMBINATIONS</strong>
+Different Materials have varying amounts of the above primitive properites.
+These materials are combined to form electrical components.
+Some of these are.</p>
+<ul>
+<li>capacitors</li>
+<li>resistors</li>
+<li>transformers</li>
+<li>transistors (silicon)</li>
+<li>copper wire</li>
+<li>insulation</li>
+</ul>
+<p><strong>FURTHER COMBINATIONS</strong></p>
+<p>The components above are combined to form circuits. Our concern is
+digital circuits.</p>
+<h2 id="boolean_algebra">
+  Boolean Algebra
+  <a class="anchor" href="#boolean_algebra">#</a>
+</h2>
+<h3 id="intro">
+  Intro
+  <a class="anchor" href="#intro">#</a>
+</h3>
+<p>Computers are built on primitive electronics (transistors)
+that output 1 of 2 values.</p>
+<p>The entire edifice of computer systems is built on
+expressing boolean alegebraic operations using these
+electronics as boolean primitives.</p>
+<h3 id="boolean-vlaues">
+  Boolean vlaues
+  <a class="anchor" href="#boolean-vlaues">#</a>
+</h3>
+<p>we call them 0 and 1
+but you can use
+1, 0
+A,B
+red,black
+on, off
+t , nil
+t and false</p>
+<p>Boolean Values   (0, 1)</p>
+<h3 id="boolean--operartor-functions">
+  boolean (operartor/functions)
+  <a class="anchor" href="#boolean--operartor-functions">#</a>
+</h3>
+<p>AND  -&gt; only outputs 1 if both inputs are 1
+OR   -&gt; outputs 1 if either or both inputs are 1
+NOT  -&gt; outputs the opposite of the input</p>
+<p>Notice each function has a single output and 1 or 2 inputs</p>
+<p>we can specify the input output relationships
+using truth tables</p>
+<h3 id="boolean-functions-can-be-combined-to-form-new-functions-dot">
+  Boolean functions can be combined to form new functions.
+  <a class="anchor" href="#boolean-functions-can-be-combined-to-form-new-functions-dot">#</a>
+</h3>
+<p>IE.</p>
+<p>(not (or nil (and t t)))</p>
+<p>you can build the truth table for the combination as well.
+Given inputs x and y.
+The idea is enumerate every possilbe input
+and then calculate the output.</p>
+<table>
+  <thead>
+      <tr>
+          <th>x</th>
+          <th>y</th>
+          <th>(not (or nil (and t t)))</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+      </tr>
+  </tbody>
+</table>
+<p>By combining logic operators we create new operators.
+If you notice this is actually the Negation of the
+AND operator which happens to be the NAND operator(not and).
+thus we can simplify the combination to:
+(not (and x y))</p>
+<h3 id="boolean-functions-of-more-than-2-inputs-dot">
+  boolean functions of more than 2 inputs.
+  <a class="anchor" href="#boolean-functions-of-more-than-2-inputs-dot">#</a>
+</h3>
+<p>I like to write my boolean functions with in prefix notation
+you can write in prefix or infix.</p>
+<p>f(x,y,z) = (or (and x y) (and z (not x))  )</p>
+<p>we can build the truth table again by enumerating all possible inputs
+and determining the outputs. notice for n inputs there are 2^n possilbe
+input combinations.</p>
+<p>input           output</p>
+<table>
+  <thead>
+      <tr>
+          <th>x</th>
+          <th>y</th>
+          <th>z</th>
+          <th>(or (and x y) (and z (not x)) )</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+  </tbody>
+</table>
+<p>The truth table and the boolean function
+are 2 different ways of describing
+the same boolean function.</p>
+<h3 id="boolean-language">
+  Boolean language
+  <a class="anchor" href="#boolean-language">#</a>
+</h3>
+<p>Whenever somebody tells you they have a very good language to work with
+you need to ask them these questions.</p>
+<p>What are the primitives ?
+what are the means of combinations?
+what are the means of abstraction ?</p>
+<p>Boolean Language.
+Primtives -&gt; state 0 and state 1
+means of cominations -&gt; boolean operators
+means of abstractionb -&gt; giving names to boolean functions/truth tables</p>
+<h3 id="boolean-identities">
+  Boolean Identities
+  <a class="anchor" href="#boolean-identities">#</a>
+</h3>
+<p>There a properites that we know of from basic elementary school mathamatics
+that magically also apply to the language of boolean algebra.
+These can be used to manipulate and simplify boolean expressions.</p>
+<h4 id="commutative-law">
+  commutative law
+  <a class="anchor" href="#commutative-law">#</a>
+</h4>
+<p>(and x y) equals (and y x)
+(or x y) equals (or y x)</p>
+<h4 id="associative-law">
+  associative law
+  <a class="anchor" href="#associative-law">#</a>
+</h4>
+<p>(and x (and y z)) equals (and (and x y) z)
+(or x (or  y z)) equals (or (or x y) z)</p>
+<h4 id="distibributive-law">
+  distibributive law
+  <a class="anchor" href="#distibributive-law">#</a>
+</h4>
+<p>(or x (and y z)) equals (and (or x y) (or x z))
+(and x (or y z)) equals (or (and x y) (and x z))</p>
+<h4 id="demorgans-law-the-not-distributes-to-the-operator-and-the-values">
+  demorgans law (the not distributes to the operator and the values
+  <a class="anchor" href="#demorgans-law-the-not-distributes-to-the-operator-and-the-values">#</a>
+</h4>
+<p>(not (and x y)) equals (or (not x) (not y))
+(not (or x y)) equals  (and (not x) (not y))</p>
+<p>we can prove all these laws just by verifying the left and right hand side
+aboves all produce the same truth tables for all possible inputs.</p>
+<h3 id="simplifying-booleans-expressions-with-algebraic-manipulation">
+  simplifying booleans expressions with algebraic manipulation
+  <a class="anchor" href="#simplifying-booleans-expressions-with-algebraic-manipulation">#</a>
+</h3>
+<p>A        B          C
+(not (and (not x) (not (or x y))))</p>
+<ol>
+<li>
+<p>use demorgans law on C
+-&gt;</p>
+<p>now we ahve</p>
+</li>
+</ol>
+<p>(not (and (not x) (and (not x) (not y)) ))</p>
+<ol>
+<li>
+<p>use the associative law</p>
+<p>(not (and (and (not x) (not x)) (not Y)))</p>
+</li>
+<li>
+<p>idempotence law says take any value w
+and do (and w w) is equivalent to w
+in our case w is (not x) so</p>
+<p>(and (not x) (not x)) simplifies to (not x)</p>
+<p>and we are left with</p>
+<p>(not (and (not x) (not y)))</p>
+<ol>
+<li>
+<p>we can apply demorgans law again</p>
+<p>(or (not (not x)) (not (not y)))</p>
+</li>
+<li>
+<p>double negation law says not of
+(not (not x) is just x.</p>
+<p>so the whole thing</p>
+<p>(not (and (not x) (not (or x y))))
+reduced</p>
+<p>(or x y)</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>The ability to apply these kind of reductions operations to boolean expressions
+can help while programming every in higher level languages to make faster clearer
+code.</p>
+<h4 id="reducing-boolean-expressions-with-truth-tables">
+  reducing boolean expressions with truth tables
+  <a class="anchor" href="#reducing-boolean-expressions-with-truth-tables">#</a>
+</h4>
+<p>we can also reduce by just looking at a truth table and see if we can identify it
+as somthing we already know.</p>
+<h3 id="boolean-function-synthesis">
+  Boolean Function Synthesis
+  <a class="anchor" href="#boolean-function-synthesis">#</a>
+</h3>
+<p>We will use boolean algebra to help us
+construct boolean functions from more primitive boolean operations.</p>
+<p>These functions will ultimately get directly translated into hardware.</p>
+<p>We can express a boolean function in 2 ways.</p>
+<ol>
+<li>a boolean expression</li>
+<li>a truth table</li>
+</ol>
+<p>We know how to go from an expression to a truth table:
+-&gt; evalutate the outpu from all possible inputs to the expression.</p>
+<h4 id="now-we-have-to-figure-out-how-to-find-and-expression-from-a-truth-table-dot">
+  Now we have to figure out how to find and expression from a truth table.
+  <a class="anchor" href="#now-we-have-to-figure-out-how-to-find-and-expression-from-a-truth-table-dot">#</a>
+</h4>
+<p>We start with a specification of a function by enumearting inputs and outputs
+like a truth table. and we need to derive the algebraic expression from this
+specification.</p>
+<p>When we design a computer we have an idead of what inputs and outputs
+we want and we can write them down. but we need to figure out what the
+expression is so we can translate into some combinations of electronic
+components called logic gates which are direct HARDWARE EMBODIMENTS of
+boolean operators and functions.</p>
+<h4 id="disjunctive-normal-form-formula">
+  disjunctive normal form formula
+  <a class="anchor" href="#disjunctive-normal-form-formula">#</a>
+</h4>
+<ol>
+<li>
+<p>go row by row and find all rows with value of 1.</p>
+</li>
+<li>
+<p>for each row with an output of 1 we construct a boolean function
+that would only produce a 1 on that row.</p>
+<p>for example</p>
+<p>x y z out
+0 0 0 1
+(and (not x) (not y) (not z))</p>
+<p>x y z out
+0 1 0 1
+(and (not x) y (not z))</p>
+<p>x y z out
+1 0 0 1
+(and z (not y) (not z))</p>
+</li>
+</ol>
+<p>If we combine all these rows with an OR
+operator we will get an expression that matches
+the truth table.</p>
+<p>(or
+(and (not x) (not y) (not z))
+(and (not x)      y  (not z))
+(and      x  (not y) (not z)))</p>
+<p>if we examine the first two clauses we notice that
+they both are dependent on the value of (not x) and (not z)
+and they both will return true no matter what y is becuase in
+one we have y and the other (not y)
+so we can reduce those 2 expressions to one expression
+(and (not x) (not z))</p>
+<p>so we end up with
+(or
+(and (not x)         (not z))
+(and      x  (not y) (not z)))</p>
+<p>There are many different ways of expressing a function that
+are equivalent.</p>
+<p>The problem of reducing a boolean expression to it&rsquo;s simples form is acutally a very
+a very difficult probelm for humans and computers to solve. It is actually NP complete hard problem.</p>
+<h4 id="boolean-function-primitives">
+  boolean function primitives
+  <a class="anchor" href="#boolean-function-primitives">#</a>
+</h4>
+<p>The important point is here is that than any Boolean Function no matter
+how complex and no matter how many inputs, can be expressed using
+only, AND OR NOT.  and furthermore we don&rsquo;t even need all of these.</p>
+<h4 id="we-don-t-need-or-gates">
+  we don&rsquo;t need or gates
+  <a class="anchor" href="#we-don-t-need-or-gates">#</a>
+</h4>
+<p>we really only need AND NOT to express any Boolean function.</p>
+<p>we have seen that we can express any function with, AND OR NOT</p>
+<p>if We can prove that we can express the OR operator using AND NOT
+We will be able to then express any function with just AND and NOT  operators.</p>
+<ul>
+<li>
+<p>proof</p>
+<p>we can do this using demorgans law.</p>
+<p>remember de morgans law
+(not (and a b)) = (or (not a) (not b))</p>
+<p>well if we say a is (not x) and b is (not y)
+we have
+(not (and (not x) (not y)))
+= (or (not (not x)) (not (not y)))
+= (or x y)</p>
+<p>so we have shown we can express an OR operator with the
+AND and NOT operators.</p>
+</li>
+</ul>
+<h4 id="nand-function">
+  NAND FUNCTION
+  <a class="anchor" href="#nand-function">#</a>
+</h4>
+<p>x y out
+0 0 1
+0 1 1
+1 0 1
+1 1 0</p>
+<p>we can create a nand function using NOT and  AND
+(NOT (AND X Y)) = (NAND X Y)
+recall AND truth table</p>
+<p>x y out
+0 0 0
+0 1 0
+1 0 0
+1 1 1</p>
+<ul>
+<li>
+<p>NAND GATE CAN EXPRESS NOT and AND</p>
+<p>if we can show that we can express NOT and AND
+with NAND, then we can express and calculate the results
+of all possible boolean functions with the NAND gate.</p>
+<p>(NAND x x) = (NOT X)
+proof
+x y nand  (Nand x x)
+0 0 1      when x= 0 =&gt; 1
+0 1 1
+1 0 1
+1 1 0      when x =1 =&gt; 0</p>
+<p>(NOT (NAND X Y)) = (AND X Y)
+proof
+x y nand not(nand)
+0 0  1     0
+0 1  1     0
+1 0  1     0
+1 1  0     1</p>
+</li>
+</ul>
+<h3 id="logic-gates">
+  LOGIC GATES
+  <a class="anchor" href="#logic-gates">#</a>
+</h3>
+<p>LOGIC GATES ARE THE PHYSICAL EMBODIMENT OF Boolean functions/operators in HARDWARE.</p>
+<p>A logic gate is a standalone simple silicon chip that is designed to deliver
+well defined boolean functionality.</p>
+<p>Elementary Logic gate chips provide -&gt; (nand and or out)
+Compositie Logic gate chips provide -&gt; are made by combining
+elementary logic gates and/or other composite gates with each other.
+(multiplexers adders etc&hellip;)</p>
+<h4 id="elementary-gates">
+  Elementary Gates
+  <a class="anchor" href="#elementary-gates">#</a>
+</h4>
+<ul>
+<li>
+<p>the most fundamental gate/chip is the NAND</p>
+<p>This is the primitive we will be using to build all our
+other gates.</p>
+<ul>
+<li>
+<p>need to show diagram</p>
+</li>
+<li>
+<p>functional specification
+if (a==1 and b==1)
+then out=0 else out=1</p>
+</li>
+<li>
+<p>truth table</p>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>a</th>
+          <th>b</th>
+          <th>out</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>AND Gate</li>
+</ul>
+<ul>
+<li>OR Gate</li>
+</ul>
+<ul>
+<li>NOT Gate</li>
+</ul>
+<h4 id="composite-gates">
+  Composite Gates
+  <a class="anchor" href="#composite-gates">#</a>
+</h4>
+<ul>
+<li>
+<p>3 input AND gates</p>
+<p>built out of two AND gates</p>
+<ul>
+<li>
+<p>diagram</p>
+</li>
+<li>
+<p>specification
+if (a == 1 and b==1 and c==1)
+then out=1 else out = 0</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="gate-interaface-and-implementation">
+  Gate interaface and implementation
+  <a class="anchor" href="#gate-interaface-and-implementation">#</a>
+</h4>
+<p>The black box abstraction around some gate provides
+an inteface. This is how a  Client/User of the gate
+thinks about WHAT the gate is supposed to do.</p>
+<p>The client/user does not need to know HOW the gate is implemented.
+To understand HOW a gate is implemented we need to go to a lower level
+of detail, we need to open the black box to see what is inside.</p>
+<p>A single unique INTERFACE may be IMPLEMENTED in many different ways.</p>
+<p>need diagrams from 6:08 day1 of</p>
+<ul>
+<li>interface</li>
+<li>implementation</li>
+</ul>
+<h4 id="circuit-implementations-electrical-engineering">
+  circuit implementations-&gt; electrical engineering
+  <a class="anchor" href="#circuit-implementations-electrical-engineering">#</a>
+</h4>
+<p>this course does not deal with physical
+circuit implementations,
+circuits transistors relays,
+electrical engineering.
+demo in person
+??? necessary?</p>
+<p>we will be using the logic gate black box abstractions
+starting with nand gate.</p>
+<h2 id="gates">
+  GATES
+  <a class="anchor" href="#gates">#</a>
+</h2>
+<figure><img src="/ox-hugo/2025-07-24_00-57-15_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-07-24_00-58-03_screenshot.png">
+</figure>
+
+<h2 id="hardware-description-language">
+  Hardware Description Language
+  <a class="anchor" href="#hardware-description-language">#</a>
+</h2>
+<p>Hardware engineers use software to and computer programming language
+called HDL to design, build and test chips/gates. That is exactly what we
+are going to do. We will build our projects using an online hardware simulator.</p>
+<p>The process of building a chip/gate is,</p>
+<ul>
+<li>given behavior specs possibly in the form of a truth table</li>
+<li>draw a diagram, combining the primitives that you were given or had developed
+previously, in a meaningful way so your have a combination that accomplishes the
+given spec</li>
+<li>implement it in HDL</li>
+<li>Test and implementation against specs</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#interfaces_implementations">Interfaces and Implementation</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#abstraction_layers">Abstraction Boundaries</a></li>
+    <li><a href="#electronic-circuits">Electronic Circuits</a></li>
+    <li><a href="#boolean_algebra">Boolean Algebra</a>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#boolean-vlaues">Boolean vlaues</a></li>
+        <li><a href="#boolean--operartor-functions">boolean (operartor/functions)</a></li>
+        <li><a href="#boolean-functions-can-be-combined-to-form-new-functions-dot">Boolean functions can be combined to form new functions.</a></li>
+        <li><a href="#boolean-functions-of-more-than-2-inputs-dot">boolean functions of more than 2 inputs.</a></li>
+        <li><a href="#boolean-language">Boolean language</a></li>
+        <li><a href="#boolean-identities">Boolean Identities</a></li>
+        <li><a href="#simplifying-booleans-expressions-with-algebraic-manipulation">simplifying booleans expressions with algebraic manipulation</a></li>
+        <li><a href="#boolean-function-synthesis">Boolean Function Synthesis</a></li>
+        <li><a href="#logic-gates">LOGIC GATES</a></li>
+      </ul>
+    </li>
+    <li><a href="#gates">GATES</a></li>
+    <li><a href="#hardware-description-language">Hardware Description Language</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
