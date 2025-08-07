@@ -55,7 +55,7 @@ capacitors resistors transformers transistors (silicon) copper wire insulation d
 <link rel="canonical" href="/docs/concepts/electronic_circuits/">
 <link rel="stylesheet" href="/book.min.a7616cf2799b58bddffce9438e31fdbfc6393687cfc0950a4a17cd1cce7e35f6.css" >
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.183f36e882ba69d85ed6209b6f31889fb903f6a80a86c843a6eb61173ef86f44.js" ></script>
+  <script defer src="/en.search.min.1b80736f2a19b71c228ed0501942893abfcd4780af9b4ebe411cdf6ff3091497.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -270,7 +270,14 @@ https://github.com/alex-shpak/hugo-book
       </ul>
     </li>
     <li><a href="#digital-circuits"><strong>digital circuits</strong></a></li>
-    <li><a href="#introduction-to-fundamental-gates-and-their-electronic-schematics-dot">Introduction to fundamental gates and their electronic schematics.</a></li>
+    <li><a href="#the-transistor">The Transistor</a></li>
+    <li><a href="#building-logic-gates-out-of-transistors">Building Logic Gates out of transistors</a>
+      <ul>
+        <li><a href="#and-gate">AND gate</a></li>
+        <li><a href="#or-gate">OR GATE</a></li>
+        <li><a href="#not-gate">NOT GATE</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -394,15 +401,150 @@ combinations and further abstraction barriers that we form from them.
 Our fundamental primitive will be a LOGIC GATE. Logic Gates are
 circuits that are created to replicate the properties of objects from
 BOOLEAN ALGEBRA.</p>
-<h2 id="introduction-to-fundamental-gates-and-their-electronic-schematics-dot">
-  Introduction to fundamental gates and their electronic schematics.
-  <a class="anchor" href="#introduction-to-fundamental-gates-and-their-electronic-schematics-dot">#</a>
+<h2 id="the-transistor">
+  The Transistor
+  <a class="anchor" href="#the-transistor">#</a>
 </h2>
+<figure><img src="/ox-hugo/2025-08-07_13-30-35_screenshot.png">
+</figure>
+
+<p>The transistor is the fundamental primitive that allows us to
+construct gate circuits. It is actually an interface to  two
+of our electronics conduction and resistance.</p>
+<p>A transistors generally has 3 terminals</p>
 <ul>
-<li>and</li>
-<li>or</li>
-<li>not</li>
+<li>a collector</li>
+<li>a emmiter</li>
+<li>a base</li>
 </ul>
+<figure><img src="/ox-hugo/2025-08-07_13-04-56_screenshot.png">
+</figure>
+
+<p>In a circuit a transistor acts like a switch. A switch is an electrical device
+that can</p>
+<ul>
+<li>open a circuit =&gt; stopping electrical flow</li>
+</ul>
+<figure><img src="/ox-hugo/2025-08-07_13-13-57_screenshot.png">
+</figure>
+
+<ul>
+<li>close circuit =&gt; allowing electricty to flow</li>
+</ul>
+<figure><img src="/ox-hugo/2025-08-07_13-15-38_screenshot.png">
+</figure>
+
+<p>A transistor acts as switch but uses electrical signals to open and
+close the circuit through the collector and transmitter.</p>
+<p>If there is no current at the base there is 100% resistance no flow of
+electricity from collector to emitter.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-09-41_screenshot.png">
+</figure>
+
+<p>But if we put a current at the base, then the it acts as
+a conductor and electricty flows from collector to emitter.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-12-31_screenshot.png">
+</figure>
+
+<p>Here is an example of simple circuit, we have a manual switch that
+when open prevents electric flow from getting to the led, but when we
+manual close it elctricity will flow to the transistor(base) and that
+will in turn allow electrcity to flow through from colleector to
+transmittor and on to the LED. Turning the lite on.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-17-58_screenshot.png">
+</figure>
+
+<h2 id="building-logic-gates-out-of-transistors">
+  Building Logic Gates out of transistors
+  <a class="anchor" href="#building-logic-gates-out-of-transistors">#</a>
+</h2>
+<p>Digital Logic Gates are a electronic circuits that mimic functions/operators
+of Boolean Algebra. We build Electronic Logic Gates using transistors.</p>
+<p>Let&rsquo;s name the states of an open and closed circuit as</p>
+<ul>
+<li>0 NO CURRENT FLOWING</li>
+<li>1 CURRENT FLOWING</li>
+</ul>
+<h3 id="and-gate">
+  AND gate
+  <a class="anchor" href="#and-gate">#</a>
+</h3>
+<p>We can put two transistors in series, that is one after the other</p>
+<figure><img src="/ox-hugo/2025-08-07_13-40-17_screenshot.png">
+</figure>
+
+<p>when the current at both bases is 0(no current flow) then the output of the second emitter will also be 0(no current flow).</p>
+<figure><img src="/ox-hugo/2025-08-07_13-43-03_screenshot.png">
+</figure>
+
+<p>But even if you put a current(1) at the base of the first or second transistor.
+the output will still be 0 because the other transistor will act as an insulator.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-45-28_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-08-07_13-45-48_screenshot.png">
+</figure>
+
+<p>The only way current will flow, that is obtain a 1 at the output
+is for both transistors to act as conductors which happens when there
+is current at both bases.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-47-25_screenshot.png">
+</figure>
+
+<p>If we put a black box around these two transistors
+it will have two inputs and 1 output. The behavior
+mimics the operator AND in boolean algebra.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-49-34_screenshot.png">
+</figure>
+
+<p>Here is our black box abstraction:</p>
+<figure><img src="/ox-hugo/2025-08-07_13-50-19_screenshot.png">
+</figure>
+
+<p>In Digital electronics we use the following symbol to represent our black Box abstraction of an AND GATE.</p>
+<figure><img src="/ox-hugo/2025-08-07_14-01-43_screenshot.png">
+</figure>
+
+<h3 id="or-gate">
+  OR GATE
+  <a class="anchor" href="#or-gate">#</a>
+</h3>
+<p>We can also situate our tranistors in Parrallel
+if both transistors are acting as insulators then
+current will not flow.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-51-46_screenshot.png">
+</figure>
+
+<p>How ever if either transistor acts as a conductor
+then current will flow througth to the output of the
+circuit.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-53-00_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-08-07_13-55-08_screenshot.png">
+</figure>
+
+<figure><img src="/ox-hugo/2025-08-07_13-55-28_screenshot.png">
+</figure>
+
+<p>When we put a box around this circuit what we have is
+an OR Gate.</p>
+<figure><img src="/ox-hugo/2025-08-07_13-58-39_screenshot.png">
+</figure>
+
+<p>This is the symbol we use for an OR gate</p>
+<figure><img src="/ox-hugo/2025-08-07_14-02-21_screenshot.png">
+</figure>
+
+<h3 id="not-gate">
+  NOT GATE
+  <a class="anchor" href="#not-gate">#</a>
+</h3>
+<p>One more very important primitive gate is called a NOT gate.</p>
+<figure><img src="/ox-hugo/2025-08-07_14-04-22_screenshot.png">
+</figure>
+
+<p><a href="https://www.youtube.com/watch?v=HjneAhCy2N4&amp;list=PL9vTTBa7QaQOoMfpP3ztvgyQkPWDPfJez">transistors</a></p>
 </article>
  
       
@@ -457,7 +599,14 @@ BOOLEAN ALGEBRA.</p>
       </ul>
     </li>
     <li><a href="#digital-circuits"><strong>digital circuits</strong></a></li>
-    <li><a href="#introduction-to-fundamental-gates-and-their-electronic-schematics-dot">Introduction to fundamental gates and their electronic schematics.</a></li>
+    <li><a href="#the-transistor">The Transistor</a></li>
+    <li><a href="#building-logic-gates-out-of-transistors">Building Logic Gates out of transistors</a>
+      <ul>
+        <li><a href="#and-gate">AND gate</a></li>
+        <li><a href="#or-gate">OR GATE</a></li>
+        <li><a href="#not-gate">NOT GATE</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
